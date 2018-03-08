@@ -25,6 +25,38 @@
 \item {\bfseries p86 B.1(b)} Compute $\alpha^{-1}, \alpha^2, \alpha^3, \alpha^4, \alpha^5$ where $\alpha = (1234)$
   
 	{\bfseries Solution.}
+	
+	\begin{tabular}{ l l }
+	
+	$\alpha^{-1} = \begin{pmatrix}
+		1 & 2 & 3 & 4 \\
+		4 & 1 & 2 & 3
+	\end{pmatrix}
+	= (1432)$ &
+	$\alpha^2 = \begin{pmatrix}
+		1 & 2 & 3 & 4 \\
+		3 & 4 & 1 & 2
+	\end{pmatrix}
+	= (13)(24)$ \\
+	
+	$\alpha^3 = \begin{pmatrix}
+		1 & 2 & 3 & 4 \\
+		4 & 1 & 2 & 3
+	\end{pmatrix}
+	= (1432)$ &
+	$\alpha^4 = \begin{pmatrix}
+		1 & 2 & 3 & 4 \\
+		1 & 2 & 3 & 4
+	\end{pmatrix}
+	= (1)(2)(3)(4)$
+	
+	\end{tabular}
+	
+	$\alpha^5 = \begin{pmatrix}
+		1 & 2 & 3 & 4 \\
+		2 & 3 & 4 & 1
+	\end{pmatrix}
+	= (1234)$
 
 %%% Problem p87 C.1(a)
 \item {\bfseries p87 C.1(a)} Determine if the permutation is even or odd. Justify your answer.
@@ -35,6 +67,14 @@
 	\end{pmatrix}$
   
 	{\bfseries Solution.}
+	
+	$\pi = \begin{pmatrix}
+		1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+		7 & 4 & 1 & 5 & 6 & 2 & 3 & 8
+	\end{pmatrix}
+	= (173)(2456) = (17)(37)(24)(45)(56)$
+	
+	Since this requires 5 transpositions, the permutation $\pi$ is odd.
 
 %%% Problem p87 C.1(e)
 \item {\bfseries p87 C.1(e)} Determine if the permutation is even or odd. Justify your answer.
@@ -42,6 +82,13 @@
 	$(123)(2345)(1357)$
   
 	{\bfseries Solution.}
+	
+	$(123)(2345)(1357) = \begin{pmatrix}
+		1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+		5 & 4 & 3 & 7 & 2 & 6 & 1
+	\end{pmatrix} = (17)(14)(12)(15)$
+	
+	Since this requires 4 transpositions, the permutation $(123)(2345)(1357)$ is even.
   
 \newpage
 
