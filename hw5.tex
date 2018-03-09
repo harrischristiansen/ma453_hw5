@@ -96,11 +96,53 @@
 \item {\bfseries p97 A.3} Let $G_1, G_2,$ and $G_3$ be groups, and let $f : G_1 \rightarrow G_2$ and $g : G_2 \rightarrow G_3$ be isomorphisms. Prove that $g \circ f : G_1 \rightarrow G_3$ is an isomorphism.
   
 	{\bfseries Solution.}
+	\begin{proof}
+          Let $x,y \in G_1$ be two elements.
+          By the property of an isomorphism we know that $f(xy) = f(x)f(y)$, where $xy$ represents the group action and $f(x), f(y) \in G_2$.
+          
+          By the properties of $g$ being an isomorphism we know that it's action on any two elements in $G_2$ preserve this same property. We can show:
+          \begin{align*}
+            (g \circ f)(xy) &= g(f(xy)) \\
+            &= g(f(x)(y)) \\
+            &= g(f(x))g(f(y))
+          \end{align*}
+          where $g(f(x)), g(f(y)) \in G_3$, therefor the first quality of an isomorphism is preserved.
+          
+          In previous homeworks we have shown that the composition of bijective functions (one to one and onto) are necessarily preserved by composition.
+          Therefore the composition of isomorphisms must preserve this quality as well.
+          That is, for each isomorphism $f,g \exists f^{-1}, g^{-1}$ 
+          such that for any element $\alpha, \in G_3$ we can say: 
+          \begin{align*}
+            (f^-1 \circ g^-1)(g \circ f)(\alpha) &= f^-1(g^-1(g(f(\alpha)))) \\
+            &= f^-1(f(\alpha)) \\
+            &= \alpha 
+          \end{align*}
+          
+          Therefore both properties of an isomorphism are preserved and the composition is an isomorphism.
+	\end{proof}
 
 %%% Problem p101 H.5
 \item {\bfseries p101 H.5} Let $c$ be a fixed element of $G$. Let $H$ be a group with the same set as $G$, and with the operation $x * y = xcy$. Prove that the function $f(x) = c^{-1}x$ is an isomorphism from $G$ to $H$.
   
 	{\bfseries Solution.}
+	\begin{proof}
+		First let us show that it preserves the multiplicative property. Let $x, y \in G$ be two elements. 
+		\begin{align*}
+			f(xy) &= c^-1xy \\
+			&= c^-1xcc^{-1}y \text{ as $cc^{-1}$ is the identity element by definition of a group} \\
+			&= f(x)f(y) 
+		\end{align*}
+		Therefore the first quality of an isomorphism is preserved.
+      
+		For bijection, let us define the inverse function $f^{-1}$ to be $f^{-1}(x) = cx$.
+		This can be used to show that bijection is preserved:
+		\begin{align*}
+			(f^{-1} \circ f)(x) &= f^{-1}(c^{-1}x) \\
+			&= cc^{-1}x \\
+			&= x
+		\end{align*}
+		Therefore the bijection is preserved for all elements in $G,H$ and the function is an isomorphism.
+	\end{proof}
 
 %%% Problem p101 I.3
 \item {\bfseries p101 I.3} If $G$ is any group, and $a$ is any element of $G$, prove that $f(x) = axa^{-1}$ is an automorphism of $G$.
