@@ -148,6 +148,24 @@
 \item {\bfseries p101 I.3} If $G$ is any group, and $a$ is any element of $G$, prove that $f(x) = axa^{-1}$ is an automorphism of $G$.
   
 	{\bfseries Solution.}
+	\begin{proof}
+		Property 1: (Let $x,y \in G$)
+		\begin{align*}
+			f(xy) &= axya^{-1} \\
+			&= axaa^{-1}ya^{-1} \\
+			&= f(x)f(y)
+		\end{align*}
+		So the first property is preserved.
+		
+		Property 2: (Let $x \in G$ and $f^{-1}(x) = a^{-1}xa$)
+		\begin{align*}
+			(f^{-1} \circ f)(x) &= f^{-1}(axa^{-1}) \\
+			&= a^{-1}axa^{-1}a \\
+			&= exe \\
+			&= x
+          \end{align*}
+		Therefore both properties are preserved and $f$ is an automorphism of $G$.
+	\end{proof}
 
 \end{enumerate}
 
